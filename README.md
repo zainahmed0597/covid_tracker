@@ -1,6 +1,10 @@
 # covid_tracker
 
-A new Flutter project.
+Flutter COVID-19 App with Rest APIS with Null Safety || Creating Project
+Main Playlist
+https://tinyurl.com/2yzzjfvp
+Part - 16 Build Covid Tracker App
+https://www.youtube.com/watch?v=MbbMiOEL4QY
 
 ## Getting Started
 
