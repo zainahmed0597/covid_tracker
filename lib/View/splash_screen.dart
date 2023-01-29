@@ -50,7 +50,7 @@ class _SplashScreenState extends State<SplashScreen>
                   child: child,
                 );
               },
-              child: Container(
+              child: const SizedBox(
                 height: 200,
                 width: 200,
                 child: Center(
