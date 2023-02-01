@@ -132,10 +132,10 @@ class ReusableRow extends StatelessWidget {
               Text(value),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
-          Divider(),
+          const Divider(),
         ],
       ),
     );
