@@ -30,7 +30,6 @@ class _WorldStatesScreenState extends State<WorldStatesScreen> with TickerProvid
   @override
   Widget build(BuildContext context) {
     StatesServices statesServices = StatesServices();
-    print('Data 1 clear');
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -42,7 +41,6 @@ class _WorldStatesScreenState extends State<WorldStatesScreen> with TickerProvid
                   future: statesServices.fecthWorldStatesRecords(),
                   builder: (context, AsyncSnapshot<WorldStatesModel> snapshot) {
                     if(!snapshot.hasData){
-                      print('Data 2 clear');
                       return Expanded(
                           flex: 1,
                           child: SpinKitFadingCircle(
@@ -51,7 +49,6 @@ class _WorldStatesScreenState extends State<WorldStatesScreen> with TickerProvid
                             controller: _controller,
                           ));
                     } else {
-                      print('Data 3 clear');
                       return Column(
                         children: [
                           PieChart(
@@ -89,7 +86,7 @@ class _WorldStatesScreenState extends State<WorldStatesScreen> with TickerProvid
                           ),
                           GestureDetector(
                             onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesListScreen()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => const CountriesListScreen()));
                             },
                             child: Container(
                               height: 50.0,
