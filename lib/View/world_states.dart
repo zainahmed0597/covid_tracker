@@ -41,6 +41,7 @@ class _WorldStatesScreenState extends State<WorldStatesScreen> with TickerProvid
                   future: statesServices.fecthWorldStatesRecords(),
                   builder: (context, AsyncSnapshot<WorldStatesModel> snapshot) {
                     if(!snapshot.hasData){
+                      print('${snapshot.toString()} Data check 2');
                       return Expanded(
                           flex: 1,
                           child: SpinKitFadingCircle(
@@ -49,6 +50,7 @@ class _WorldStatesScreenState extends State<WorldStatesScreen> with TickerProvid
                             controller: _controller,
                           ));
                     } else {
+                      print('${snapshot.toString()} Data check 3');
                       return Column(
                         children: [
                           PieChart(
